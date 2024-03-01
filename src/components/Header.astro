@@ -1,0 +1,26 @@
+---
+import ThemeIcon from "./ThemeIcon.astro";
+---
+
+<header>
+  <nav class="flex justify-end items-center gap-4 py-8">
+    <ul class="flex gap-4 font-outfit font-semibold">
+      <li>
+        <a
+          href="/"
+          class="transition duration-300 ease-in-out hover:text-[#ab4b08]"
+          >Inicio</a
+        >
+      </li>
+      <li>
+        <a
+          href="about"
+          class="transition duration-300 ease-in-out hover:text-[#ab4b08]"
+          >Post</a
+        >
+      </li>
+    </ul>
+    <ThemeIcon />
+  </nav>
+  <div class="h-[1px]" id="separator"></div>
+</header>

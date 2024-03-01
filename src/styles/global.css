@@ -1,0 +1,25 @@
+html {
+  background: #f3f4f6;
+  color: #0a0a0b;
+}
+
+html.dark {
+  background-color: #0a0a0b;
+  color: #e5e7eb;
+}
+
+.dark #separator {
+  background-color: #ab4b08;
+}
+
+#separator {
+  background-color: #e5e7eb;
+}
+
+.dark #color-secondary {
+  color: #a3a2a2;
+}
+
+#color-secondary {
+  color: #282728;
+}
