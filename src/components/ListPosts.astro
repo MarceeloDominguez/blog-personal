@@ -1,0 +1,27 @@
+---
+import Post from "../components/Post.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("posts");
+---
+
+<section class="mt-14">
+  <h2 class="font-outfit">Últimas publicaciones</h2>
+  <div class="grid md:grid-cols-2 gap-5 mt-4">
+    {
+      posts.map(
+        (post) =>
+          post.data.publish && (
+            <div class="flex-1 p-4 hover:shadow-lg hover:shadow-gray-500/10 border-[1px] border-gray-900 transition duration-300 ease-in-out rounded-md">
+              <Post
+                title={post.data.title}
+                description={post.data.description}
+                slug={post.slug}
+                publishedAt={post.data.publishedAt}
+              />
+            </div>
+          )
+      )
+    }
+  </div>
+</section>
