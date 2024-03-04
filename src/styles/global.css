@@ -13,7 +13,7 @@ html.dark {
 }
 
 #separator {
-  background-color: #e5e7eb;
+  background-color: #d0d2d8;
 }
 
 .dark #color-secondary {
@@ -24,6 +24,6 @@ html.dark {
   color: #282728;
 }
 
-/* .post blockquote {
-  @apply flex flex-row gap-2 before:block before:h-auto before:w-1 before:max-w-[1px] before:bg-red-400 before:content-[''];
-} */
+.post code {
+  @apply rounded-sm px-1 py-[2px] text-[#ab4b08] font-bold;
+}

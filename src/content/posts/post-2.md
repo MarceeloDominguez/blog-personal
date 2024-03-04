@@ -3,7 +3,7 @@ title: "Titulo del post 2"
 description: "Description del post 2"
 publishedAt: 2024-03-02
 slug: "segundo-post"
-publish: true
+publish: false
 ---
 
 ## Vocesque meum remis est neque Neptunus monte

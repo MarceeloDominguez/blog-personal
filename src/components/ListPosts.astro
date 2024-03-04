@@ -6,7 +6,14 @@ const posts = await getCollection("posts");
 ---
 
 <section class="mt-14">
-  <h2 class="font-outfit">Últimas publicaciones</h2>
+  <div class="flex justify-between items-center font-outfit">
+    <h2 class="font-outfit">Últimas publicaciones</h2>
+    <a
+      href="posts"
+      class="transition duration-300 ease-in-out hover:text-[#ab4b08] text-sm"
+      >Ver más</a
+    >
+  </div>
   <div class="grid md:grid-cols-2 gap-5 mt-4">
     {
       posts.map(

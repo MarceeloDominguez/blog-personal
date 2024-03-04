@@ -1,6 +1,7 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import Prose from "../../components/Prose.astro";
 
 // const { id } = Astro.params;
 
@@ -22,9 +23,9 @@ const { Content } = await post.render();
 ---
 
 <Layout title={`Post`}>
-  <article class="post flex-1">
-    <blockquote class="w-1 bg-red-500">y</blockquote>
-    {post.data.title}
-    <Content />
+  <article class="post flex-1 py-10">
+    <Prose>
+      <Content />
+    </Prose>
   </article>
 </Layout>

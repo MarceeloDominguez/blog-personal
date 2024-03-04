@@ -12,7 +12,7 @@ const name = "Marcelo Dominguez";
       title={`Enviar un correo electrónico a ${name} al correo ${email}`}
       target="_blank"
       rel="noopener noreferrer"
-      class="flex gap-1 font-outfit font-bold"
+      class="flex gap-1 font-outfit font-semibold transition duration-300 ease-in-out hover:text-[#ab4b08] truncate"
     >
       <svg
         width="24"
@@ -27,22 +27,22 @@ const name = "Marcelo Dominguez";
           d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
         ></path><path d="M3 7l9 6l9 -6"></path></svg
       >
-      Marcelo Domínguez
+      <span class="truncate">Marcelo Domínguez</span>
     </a>
 
-    <ul class="flex gap-4 font-outfit font-semibold">
+    <ul class="flex items-center gap-4 font-outfit font-semibold">
       <li>
         <a
           href="/"
           class="transition duration-300 ease-in-out hover:text-[#ab4b08]"
-          >Inicio</a
-        >
+          >Inicio
+        </a>
       </li>
       <li>
         <a
-          href="about"
+          href="posts"
           class="transition duration-300 ease-in-out hover:text-[#ab4b08]"
-          >Post</a
+          >Publicaciones</a
         >
       </li>
       <ThemeIcon />
