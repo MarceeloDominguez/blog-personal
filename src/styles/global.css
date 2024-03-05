@@ -27,3 +27,11 @@ html.dark {
 .post code {
   @apply rounded-sm px-1 py-[2px] text-[#ab4b08] font-bold;
 }
+
+.dark #skills-button {
+  background-color: #161515;
+}
+
+#skills-button {
+  background-color: #eeeeee;
+}

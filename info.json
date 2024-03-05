@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "name": "HTML"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "Tailwind"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "ReactNative"
+    },
+    {
+      "name": "Node"
+    },
+    {
+      "name": "Next"
+    },
+    {
+      "name": "Git"
+    }
+  ]
+}

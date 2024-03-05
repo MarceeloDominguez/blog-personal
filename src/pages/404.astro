@@ -3,5 +3,26 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="404">
-  <h2>404 ERROR</h2>
+  <div class="flex-1 flex items-center justify-center flex-col">
+    <svg
+      width="220"
+      height="220"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+        d="M3 7v4a1 1 0 0 0 1 1h3"></path><path d="M7 7v10"></path><path
+        d="M10 8v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1 -1v-8a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1z"
+      ></path><path d="M17 7v4a1 1 0 0 0 1 1h3"></path><path d="M21 7v10"
+      ></path></svg
+    >
+    <p class="font-outfit">
+      Página no encontrada. <a href="/" class="text-[#ab4b08] font-bold"
+        >Volver</a
+      >
+    </p>
+  </div>
 </Layout>

@@ -1,0 +1,50 @@
+---
+import React from "../icons/react.astro";
+import TypeScript from "../icons/typescript.astro";
+import ReactNative from "../icons/reactnative.astro";
+import Tailwind from "../icons/tailwind.astro";
+import HTML from "../icons/html.astro";
+import CSS from "../icons/css.astro";
+import JavaScript from "../icons/javascript.astro";
+import Node from "../icons/node.astro";
+import Next from "../icons/next.astro";
+import Git from "../icons/git.astro";
+import { skills } from "@info";
+
+const SKILLS_ICONS: Record<string, any> = {
+  HTML,
+  CSS,
+  Tailwind,
+  React,
+  TypeScript,
+  ReactNative,
+  JavaScript,
+  Node,
+  Next,
+  Git,
+  Astro,
+};
+---
+
+<section class="py-4 lg:mt-12 mt-8">
+  <h3 class="font-outfit">Habilidades</h3>
+  <ul class="inline-flex gap-3 flex-wrap py-4">
+    {
+      skills.map(({ name }) => {
+        const Icon = SKILLS_ICONS[name];
+
+        return (
+          <li
+            id="skills-button"
+            class="flex items-center gap-1 px-3 py-[6px] rounded-md"
+          >
+            {Icon && <Icon />}
+            <span class="font-outfit text-sm">
+              {name === "ReactNative" ? "React Native" : name}
+            </span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
