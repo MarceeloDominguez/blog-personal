@@ -1,5 +1,5 @@
 ---
-title: "Ejemplo de uso del hook useState en React JS"
+title: "Ejemplo de uso del hook useState en React"
 description: "En React, el hook useState se utiliza para agregar estado a los componentes funcionales. Este hook devuelve un array con dos elementos: el estado actual y una función para actualizar ese estado."
 publishedAt: 2024-03-02
 slug: "primer-post"
@@ -25,11 +25,11 @@ publish: true
       >       
 </div>
 
-# Ejemplo de uso del hook useState en React JS
+# Ejemplo de uso del hook useState en React
 
 <p id="color-secondary">En React, el hook <b>useState</b> se utiliza para agregar estado a los componentes funcionales. Este hook devuelve un array con dos elementos: el estado actual y una función para actualizar ese estado. La función de actualización puede recibir un nuevo valor o una función que calcula el nuevo valor basándose en el estado anterior.</p>
 
-**_Ejemplo de cómo usar useState en un componente funcional de React JS_**
+**_Ejemplo de cómo usar useState en un componente funcional de React_**
 
 ```javascript
 function Contador() {
