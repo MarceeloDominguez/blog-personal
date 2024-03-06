@@ -8,6 +8,7 @@ publish: true
 
 <div class="flex items-center font-outfit gap-2 text-[14px] pb-2">
        <svg
+       id="color-secondary"
         width="16"
         height="16"
         viewBox="0 0 24 24"
@@ -20,7 +21,7 @@ publish: true
           d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"
         ></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path
           d="M4 11h16"></path><path d="M11 15h1"></path><path d="M12 15v3"
-        ></path></svg>   
+        ></path></svg>  
         <span id="color-secondary" class="font-outfit text-sm">1 de marzo de 2024</span
       >       
 </div>
@@ -29,7 +30,7 @@ publish: true
 
 <p id="color-secondary">En React, el hook <b>useState</b> se utiliza para agregar estado a los componentes funcionales. Este hook devuelve un array con dos elementos: el estado actual y una función para actualizar ese estado. La función de actualización puede recibir un nuevo valor o una función que calcula el nuevo valor basándose en el estado anterior.</p>
 
-**_Ejemplo de cómo usar useState en un componente funcional de React_**
+**_Ejemplo de cómo usar useState en un componente funcional de React:_**
 
 ```javascript
 function Contador() {

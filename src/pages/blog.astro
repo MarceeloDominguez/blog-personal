@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import formatDate from "../util/formatDate";
+import Calendar from "@/icons/calendar.astro";
+import { filterAndSortPosts } from "@/util/sortPost";
 
 const posts = await getCollection("posts");
 ---
@@ -10,50 +12,31 @@ const posts = await getCollection("posts");
   <main class="flex-1 py-6">
     <div>
       {
-        posts.map(
-          (post) =>
-            post.data.publish && (
-              <a href={`/post/${post.slug}`}>
-                <article class="mb-8">
-                  <div class="flex flex-col gap-y-2 transition duration-300 ease-in-out hover:text-[#ab4b08]">
-                    <h2 class="font-outfit font-bold md:text-3xl text-xl">
-                      {post.data.title}
-                    </h2>
-                    <span id="color-secondary" class="line-clamp-1 font-outfit">
-                      {post.data.description}
-                    </span>
-                  </div>
-                  <div class="flex items-center gap-2 justify-end py-4">
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <>
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
-                        <path d="M16 3v4" />
-                        <path d="M8 3v4" />
-                        <path d="M4 11h16" />
-                        <path d="M11 15h1" />
-                        <path d="M12 15v3" />
-                      </>
-                    </svg>
-                    <span id="color-secondary" class="font-outfit text-sm">
-                      {formatDate(post.data.publishedAt, "es", {
-                        dateStyle: "long",
-                      })}
-                    </span>
-                  </div>
-                </article>
-              </a>
-            )
-        )
+        filterAndSortPosts(posts).map((post) => (
+          <a href={`/post/${post.slug}`}>
+            <article class="mb-8 transition duration-300 ease-in-out hover:text-[#ab4b08]">
+              <div
+                id="border"
+                class="flex flex-col gap-y-2 border-[1px] rounded-xl p-5"
+              >
+                <h2 class="font-outfit font-bold md:text-3xl text-xl">
+                  {post.data.title}
+                </h2>
+                <div class="flex items-center gap-2 py-3">
+                  <Calendar />
+                  <span id="color-secondary" class="font-outfit text-sm">
+                    {formatDate(post.data.publishedAt, "es", {
+                      dateStyle: "long",
+                    })}
+                  </span>
+                </div>
+                <span id="color-secondary" class="line-clamp-2 font-outfit">
+                  {post.data.description}
+                </span>
+              </div>
+            </article>
+          </a>
+        ))
       }
     </div>
   </main>

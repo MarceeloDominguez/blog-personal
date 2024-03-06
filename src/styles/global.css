@@ -35,3 +35,11 @@ html.dark {
 #skills-button {
   background-color: #eeeeee;
 }
+
+.dark #border {
+  border-color: #111827;
+}
+
+#border {
+  border-color: #d0d2d8;
+}
