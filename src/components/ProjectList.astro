@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import Project1 from "@/assets/proyecto-1.png";
+import Button from "./Button.astro";
+import Github from "@/icons/github.astro";
+import Eye from "@/icons/eye.astro";
+import React from "@/icons/react.astro";
+import TypeScript from "@/icons/typescript.astro";
+---
+
+<section class="py-4 lg:mt-12 mt-8">
+  <h2 class="font-outfit">Proyectos</h2>
+  <div class="grid md:grid-cols-2 gap-5 mt-4">
+    {
+      [...Array(1)].map((item) => (
+        <div id="border" class="border-[1px] rounded-md overflow-hidden">
+          <Image src={Project1} alt="Primer proyecto" />
+          <div class="p-2">
+            <h2 class="font-outfit font-bold line-clamp-1 text-lg mt-1">
+              FinTrack
+            </h2>
+            <p
+              id="color-secondary"
+              class="font-outfit line-clamp-2 text-[16px] my-2"
+            >
+              Esta aplicación te permite registrar tus ingresos y gastos
+              mensuales de manera eficiente.
+            </p>
+            <ul class="inline-flex gap-2 flex-wrap py-4">
+              <li
+                id="skills-button"
+                class="flex items-center gap-1 px-3 py-[6px] rounded-md"
+              >
+                <React />
+                <span class="font-outfit text-sm">React Native</span>
+              </li>
+              <li
+                id="skills-button"
+                class="flex items-center gap-1 px-3 py-[6px] rounded-md"
+              >
+                <TypeScript />
+                <span class="font-outfit text-sm">TypeScript</span>
+              </li>
+            </ul>
+            <div class="py-2 flex gap-2">
+              <Button link="https://fintrack-page.vercel.app/">
+                <Eye />
+                Demo
+              </Button>
+              <Button link="https://github.com/MarceeloDominguez/fintrack-page">
+                <Github />
+                Github
+              </Button>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
